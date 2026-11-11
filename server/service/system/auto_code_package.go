@@ -20,6 +20,7 @@ import (
 	"gorm.io/gorm"
 )
 
+
 var AutoCodePackage = new(autoCodePackage)
 
 type autoCodePackage struct{}

@@ -30,6 +30,8 @@ const (
 	BizTransferOut     = "TRANSFER_OUT"     // 调拨出
 	BizTransferIn      = "TRANSFER_IN"      // 调拨入
 	BizStocktakeAdjust = "STOCKTAKE_ADJUST" // 盘点调整
+	BizMfgIssue        = "MFG_ISSUE"        // 生产领料（出）
+	BizMfgReceipt      = "MFG_RECEIPT"      // 生产完工入库（入）
 )
 
 // 方向常量

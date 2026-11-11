@@ -12,6 +12,7 @@ import (
 	"gorm.io/gorm"
 )
 
+
 type aiWorkflowSession struct{}
 
 var AIWorkflowSessionServiceApp = new(aiWorkflowSession)

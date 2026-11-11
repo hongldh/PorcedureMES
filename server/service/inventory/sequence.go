@@ -28,6 +28,10 @@ var bizPrefix = map[string]string{
 	inventory.BizTransferOut:     "DBDD", // 调拨（出/入共用）
 	inventory.BizTransferIn:      "DBDD",
 	inventory.BizStocktakeAdjust: "PDDD", // 盘点
+	inventory.BizMfgIssue:        "LL",   // 生产领料
+	inventory.BizMfgReceipt:      "RK",   // 生产完工入库
+	"MFG_WORK_ORDER":             "SCGD", // 生产工单
+	"MFG_WORK_REPORT":            "BG",   // 报工单
 }
 
 // NextDocNo 取下一个单号（必须在事务中调用）

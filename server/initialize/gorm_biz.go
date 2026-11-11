@@ -3,6 +3,7 @@ package initialize
 import (
 	"github.com/flipped-aurora/gin-vue-admin/server/global"
 	"github.com/flipped-aurora/gin-vue-admin/server/model/inventory"
+	"github.com/flipped-aurora/gin-vue-admin/server/model/manufacturing"
 )
 
 func bizModel() error {
@@ -35,6 +36,26 @@ func bizModel() error {
 		inventory.InvTransferItem{},
 		inventory.InvStocktake{},
 		inventory.InvStocktakeItem{},
+
+		// ===== MES：制造执行（阶段4）=====
+		manufacturing.MfgBom{},
+		manufacturing.MfgBomItem{},
+		manufacturing.MfgWorkOrder{},
+		manufacturing.MfgWorkOrderItem{},
+		manufacturing.MfgIssue{},
+		manufacturing.MfgIssueItem{},
+		manufacturing.MfgReceipt{},
+
+		// ===== MES：工艺主数据（阶段5a）=====
+		manufacturing.MfgWorkstation{},
+		manufacturing.MfgTeam{},
+		manufacturing.MfgTeamMember{},
+		manufacturing.MfgRouting{},
+		manufacturing.MfgRoutingItem{},
+
+		// ===== MES：派工报工（阶段5b）=====
+		manufacturing.MfgWorkOrderOp{},
+		manufacturing.MfgWorkReport{},
 	)
 	if err != nil {
 		return err

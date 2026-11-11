@@ -20,5 +20,11 @@ func initBizRouter(routers ...*gin.RouterGroup) {
 	inventoryRouter.MasterDataRouter.Init(privateGroup)
 	inventoryRouter.DocumentsRouter.Init(privateGroup)
 
+	// ===== MES 模块路由（阶段4 + 5a）=====
+	mfgRouter := router.RouterGroupApp.Manufacturing
+	mfgRouter.MfgRouter.Init(privateGroup)
+		mfgRouter.MfgMasterRouter.Init(privateGroup)
+		mfgRouter.MfgExecutionRouter.Init(privateGroup) // 5b 派工报工
+
 	holder(publicGroup, privateGroup)
 }
